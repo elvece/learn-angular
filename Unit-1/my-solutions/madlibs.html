@@ -2,11 +2,51 @@
 <html ng-app>
   <head>
     <meta charset="utf-8">
-    <title>Basic Angular Practice</title>
+    <title>Mad Libs with Angular</title>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!--<link rel="stylesheet" href="/css/main.css">-->
   </head>
   <body>
+
+    <div class="container">
+      <h1>Mad Libs with Angular!</h1>
+      <hr>
+      <h3>Fill out the following form to play:</h3>
+      <br>
+      <form>
+        <div class="form-group">
+          <label for="boys-name">Boy's Name</label>
+          <input type="text" class="form-control" ng-model="boysName" placeholder="Enter a boy's name...">
+        </div>
+        <div class="form-group">
+          <label for="adjective">Adjective</label>
+          <input type="text" class="form-control" ng-model="adjective" placeholder="Enter an adjective...">
+        </div>
+        <div class="form-group">
+          <label for="plural-noun">Plural Noun</label>
+          <input type="text" class="form-control" ng-model="pluralNoun" placeholder="Enter a plural noun...">
+        </div>
+        <div class="form-group">
+          <label for="insect">An insect, plural</label>
+          <input type="text" class="form-control" ng-model="insect" placeholder="Enter an insect, plural...">
+        </div>
+        <div class="form-group">
+          <label for="plural-noun">Plural Noun</label>
+          <input type="text" class="form-control" ng-model="pluralNounTwo" placeholder="Enter a plural noun...">
+        </div>
+        <div class="form-group">
+          <label for="verb">Ad verb ending in "s"</label>
+          <input type="text" class="form-control" ng-model="verb" placeholder="Enter a verb ending in 's'...">
+        </div>
+        <button type="submit" class="btn btn-danger">Generate!</button>
+      </form>
+
+      <h3>Your Mad Libs Result:</h3>
+      <hr>
+      <h3>I'm in love with <span>{{boysName}}</span>. He's so <span>{{adjective}}</span>! He has big flat <span>{{pluralNoun}}</span>, and when our <span>{{insect}}</span> meet, I get <span>{{pluralNounTwo}}</span> in my stomach. I've fallen for him like a ton of <span>{{verb}}</span>, and he shuffles for me, too. But I think he's got another girlfriend. What should I do?</h3>
+      <br>
+      <button type="submit" class="btn btn-danger">Play Again?</button>
+    </div>
 
     <!-- scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>

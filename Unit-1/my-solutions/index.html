@@ -7,69 +7,72 @@
     <!--<link rel="stylesheet" href="/css/main.css">-->
   </head>
   <body>
-    <h1> Angular Practice</h1>
-      <p>This looks super lame but its displays my initial practice learning Angular!</p>
 
-    <h3> Add numbers:</h3>
-      <p>1 + 6 = {{1 + 6}}</p>
-    <hr>
+    <div class="container">
 
-    <h3>Input fields:</h3>
-      <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
-      <p>{{ greeting }} world!</p>
-      <input type="text" placeholder="What is your name?" ng-model="name" >
-      <h4>My name is: {{name}}</h4>
-    <hr>
+      <h1> Angular Practice</h1>
+        <p>This looks super lame but its displays my initial practice learning Angular!</p>
 
-    <h3>Select box:</h3>
-      <select ng-model="selection">
-        <option>Dogs</option>
-        <option>Cats</option>
-        <option>Dogs and Cats</option>
-        <option>Neither</option>
-      </select>
-      <h4>I love {{selection}}</h4>
-    <hr>
+      <h3> Add numbers:</h3>
+        <p>1 + 6 = {{1 + 6}}</p>
+      <hr>
 
-    <h3>Currency Filter:</h3>
-      <p>{{3.14159265359 | currency: "€"}}<p>
-    <hr>
+      <h3>Input fields:</h3>
+        <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+        <p>{{ greeting }} world!</p>
+        <input type="text" placeholder="What is your name?" ng-model="name" >
+        <h4>My name is: {{name}}</h4>
+      <hr>
 
-    <h3>Case Filter:</h3>
-      <input type="text" ng-model="words">
-      <p>Caps: {{words | uppercase}}</p>
-      <p>Regular: {{words | lowercase}}</p>
-    <hr>
+      <h3>Select box:</h3>
+        <select ng-model="selection">
+          <option>Dogs</option>
+          <option>Cats</option>
+          <option>Dogs and Cats</option>
+          <option>Neither</option>
+        </select>
+        <h4>I love {{selection}}</h4>
+      <hr>
 
-    <h3>Number Filter:</h3>
-      <p>How many digits of pi do you want?</p>
-      <select ng-model="pi">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-      </select><br>
-      <ng-pluralize count="pi"
-                    when="{'1': 'Here is pi with 1 digit: ',
-                          'other': 'Here is pi with {} digits: '}">
-      </ng-pluralize><p>{{3.14159265359 | number: pi}}</p>
-    <hr>
+      <h3>Currency Filter:</h3>
+        <p>{{3.14159265359 | currency: "€"}}</p>
+      <hr>
 
-    <h3>Tip Calculator:</h3>
-      <p>How much did your meal cost? <input type="text" ng-model="cost"></p>
-      <p>How much do you want to tip?</p>
-      <select ng-model="tip">
-        <option value="0.10">10%</option>
-        <option value="0.15">15%</option>
-        <option value="0.20">20%</option>
-      </select>
-      <br>
-      <h4>Subtotal: {{cost | currency}}</h4>
-      <h4>Tip: {{cost*tip | currency}}</h4>
-    <hr>
+      <h3>Case Filter:</h3>
+        <input type="text" ng-model="words">
+        <p>Caps: {{words | uppercase}}</p>
+        <p>Regular: {{words | lowercase}}</p>
+      <hr>
 
+      <h3>Number Filter:</h3>
+        <p>How many digits of pi do you want?</p>
+        <select ng-model="pi">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+        </select><br>
+        <ng-pluralize count="pi"
+                      when="{'1': 'Here is pi with 1 digit: ',
+                            'other': 'Here is pi with {} digits: '}">
+        </ng-pluralize><p>{{3.14159265359 | number: pi}}</p>
+      <hr>
+
+      <h3>Tip Calculator:</h3>
+        <p>How much did your meal cost? <input type="text" ng-model="cost"></p>
+        <p>How much do you want to tip?</p>
+        <select ng-model="tip">
+          <option value="0.10">10%</option>
+          <option value="0.15">15%</option>
+          <option value="0.20">20%</option>
+        </select>
+        <br>
+        <h4>Subtotal: {{cost | currency}}</h4>
+        <h4>Tip: {{cost*tip | currency}}</h4>
+      <hr>
+    </div>
     <!-- scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
