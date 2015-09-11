@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ greeting }} World</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="/css/main.css">-->
+  </head>
+  <body>
+    <p>{{1 + 6}}</p>
+    <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+    <p>{{ greeting }} world!</p>
+    <input type="text" placeholder="What is your name?" ng-model="name" >
+    <h1>My name is: {{name}}</h1>
+    <select ng-model="selection">
+      <option>Dogs</option>
+      <option>Cats</option>
+      <option>Dogs and Cats</option>
+      <option>Neither</option>
+    </select>
+    <h3>I love {{selection}}</h3>
+    <p>{{3.14159265359 | currency: "€"}}<p>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="/js/main.js"></script>-->
+  </body>
+</html>

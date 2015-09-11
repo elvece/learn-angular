@@ -1,4 +1,6 @@
-#Angular Curriculum
+##Angular Curriculum
+
+***This repo contains my answers and solutions to the exercises compiled in this cirriculum:***
 
 Unit 1:
 
