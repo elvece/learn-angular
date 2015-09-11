@@ -1,6 +1,6 @@
 ##Angular Curriculum
 
-***This repo contains my answers and solutions to the exercises compiled in this cirriculum:***
+***This repo contains my work to the exercises compiled in this cirriculum. My solutions are included in the my-solutions folder in each unit.***
 
 Unit 1:
 
