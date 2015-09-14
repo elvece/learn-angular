@@ -116,6 +116,7 @@ The element is hidden when the expression provided to `ng-show` attribute is `fa
 **EXERCISE**
 
 Inspect an element that is hidden by `ng-show`/`hide` in the browser. What does Angular do to hide an element?
+*** Sets display to none. ***
 
 **EXERCISE**
 
