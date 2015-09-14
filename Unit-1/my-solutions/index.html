@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Basic Angular Practice</title>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="/css/main.css">-->
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
 
@@ -131,9 +131,17 @@
         <br>
         <h4>Sign up page:</h4>
         <input type="password" ng-model="password">
-        <p>Your password is {{password.length}} characters.</p>
+        <p ng-class="{invalid: password.length < 6, valid: password.length >= 6}">Your password is {{password.length || 0}} characters.</p>
         <p ng-show="password.length < 6">Password is invalid!</p>
         <button type="submit" ng-show="password.length >= 6">Sign up!</button>
+        <hr>
+
+        <h3>Class:</h3>
+
+        <div ng-class="{highlight: 4 + 4 == 8}"> 4 + 4 = 8</div>
+        <div ng-class="{highlight: 4 + 4 == 10}">4 + 4 = 10</div>
+
+
     </div>
     <br><br>
     <!-- scripts -->
