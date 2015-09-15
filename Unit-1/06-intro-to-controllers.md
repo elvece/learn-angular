@@ -86,9 +86,13 @@ Start by adding an external JavaScript file, *main.js*, to create a module with 
 ## Questions
 
 * What is `$scope`?
+  * **Connects controllers and views together. You can think of the scope and its properties as the data which is used to render the view. The scope is the single source-of-truth for all things view related. From documentation: Scope is an object that refers to the application model. It is an execution context for expressions.**
 * What are Angular modules? What's the syntax for defining a module?
+  * **Defines the applicaion and acts as the container for all parts of application, such as controllers (controllers always belong to one module). They can organize application logic and make them work together using dependency injection ie ` var myModule = angular.module('moduleName',['dependency1','dependency2']);`**
 * Why do we pass in `$scope` as an argument to controller functions?
+  * **So that the controller logic is bound to the view???**
 * In Express, what are Angular controllers most analogous to?
+  * **get route???**
 
 ## Resources:
 
