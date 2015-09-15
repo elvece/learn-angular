@@ -1,4 +1,15 @@
+var app = angular.module('madLibs', []);
 
-// $('#again').on('click', function(){
-//   $('form').reset();
-// });
+var mainController = function($scope){
+  $scope.madLibs = {
+    boysName: "",
+    adjective: "",
+    pluralNoun: "",
+    pluralInsect: "",
+    pluralNounTwo: "",
+    pluralNounThree: "",
+    sVerb: ""
+  };
+};
+
+app.controller('mainController', ['$scope', mainController]);
