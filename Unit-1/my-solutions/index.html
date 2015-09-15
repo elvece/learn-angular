@@ -165,6 +165,20 @@
             <img ng-src="{{camera.image}}" class="thumbnail">
           </div>
         </div>
+        <hr>
+
+        <h3>Controllers:</h3>
+
+        <div ng-controller="mainController">
+          <p>My name is: {{name}}</p>
+          <input ng-model="name" type="text" placeholder="What is your name?">
+        </div><br>
+
+        <div ng-controller="exerciseController">
+          <p>My favorite color is {{FavColor}}.</p>
+          <h3>There are {{secondsInACentury() | number}} seconds in a century!</h3>
+          <h4>Today: {{rightNow | date:'EEEE, MMMM d, y h:mm a'}}</h4>
+        </div>
 
     </div>
     <br><br>

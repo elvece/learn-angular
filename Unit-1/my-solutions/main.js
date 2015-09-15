@@ -1,6 +1,7 @@
-angular.module('myapp', ["ngSanitize"]);
+var app = angular.module('myapp', ["ngSanitize"]);
 
 var mainControllerFunction = function($scope) {
+  $scope.name = "Severus Snape";
   $scope.names = ["Harry", "Ron", "Hermione", "Sirius", "Hedwig", "Tonks"];
   $scope.symbols = ["&spades;", "&clubs;", "&hearts;", "&diams;"];
   $scope.numbers = [1,1,2,5,6,9,9,9];
@@ -38,7 +39,23 @@ var mainControllerFunction = function($scope) {
   };
 };
 
+var ExercisesController = function($scope){
+  $scope.FavColor = "maroon";
+  $scope.secondsInACentury = function calculateSeconds(){
+    var secondsInMin = 60;
+    var minutesInHour = 60;
+    var hoursInDay = 24;
+    var daysInYear = 365;
+    var yearsInCentury = 100;
+    var secondsInCentury = secondsInMin * minutesInHour * hoursInDay * daysInYear * yearsInCentury;
+    return secondsInCentury;
+  };
+  $scope.rightNow = new Date();
+};
 
-angular.module('myapp')
-  .controller('mainController', ['$scope', mainControllerFunction]);
+
+app
+  .controller('mainController', ['$scope', mainControllerFunction])
+  .controller('exerciseController', ['$scope', ExercisesController]);
+
 
