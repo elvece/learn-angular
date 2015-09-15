@@ -189,14 +189,14 @@ Use the following data:
 ## Questions
 
 * What is the purpose of `ng-init`?
-  * Evaluate an expression in curreny scope (use logic), don't overuse, use for special properties with ng-repeat or for injecting data via server side scripting
+  * *Evaluate an expression in curreny scope (use logic), don't overuse, use for special properties with ng-repeat or for injecting data via server side scripting.*
 * Why use `ng-src` and `ng-href`?
- * `ng-href`: use this when using {{hash}} so angular has time to load link first, otherwise will get 404 error. Same for `ng-src`, inside {{}} needs to be evaluated and replaced before it can load
+ * *`ng-href`: use this when using {{hash}} so angular has time to load link first, otherwise will get 404 error. Same for `ng-src`, inside {{}} needs to be evaluated and replaced before it can load.*
 * What are directives?
-  * Markers on DOM elements (ie. attribute, element name, css class) that tell Agular's HTML compiler to attach a specific behavior to or transdorm that DOM element. Custom directives can also be made.
+  * *Markers on DOM elements (ie. attribute, element name, css class) that tell Agular's HTML compiler to attach a specific behavior to or transdorm that DOM element. Custom directives can also be made.
 * Does `ng-class` require an object to be passed in?
-  * No, you can use string or array syntax, evaluated expressions (objects), or ternary operators
+  * *No, you can use string or array syntax, evaluated expressions (objects), or ternary operators.*
 * What order does an ng-repeat display items in?
-   * Used to display alphebetical, now, most browsers typically display in order they were defined
+   * *Used to display alphebetical, now, most browsers typically display in order they were defined.*
 * How does `ng-repeat` handle duplicate data?
- * By default, it does not handle duplicates, because one-to-one mapping of DOM elements and collecton items cannot be mainitained. If handling duplicates is needed, use the `track by` expression; for example, you can track items by the index of each item in the collection, using the special scope property $index: `track by $index`
+ * *By default, it does not handle duplicates, because one-to-one mapping of DOM elements and collecton items cannot be mainitained. If handling duplicates is needed, use the `track by` expression; for example, you can track items by the index of each item in the collection, using the special scope property $index: `track by $index`.*
