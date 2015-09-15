@@ -11,13 +11,16 @@
     <div class="container">
 
       <h1> Angular Practice</h1>
+
         <p>This looks super lame but its displays my initial practice learning Angular!</p>
 
       <h3> Add numbers:</h3>
+
         <p>1 + 6 = {{1 + 6}}</p>
       <hr>
 
       <h3>Input fields:</h3>
+
         <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
         <p>{{ greeting }} world!</p>
         <input type="text" placeholder="What is your name?" ng-model="name" >
@@ -25,20 +28,23 @@
       <hr>
 
       <h3>Select box:</h3>
-        <select ng-model="selection">
+
+        <select ng-model="animalSelection">
           <option>Dogs</option>
           <option>Cats</option>
           <option>Dogs and Cats</option>
           <option>Neither</option>
         </select>
-        <h4>I love {{selection}}</h4>
+        <h4>I love {{animalSelection}}</h4>
       <hr>
 
       <h3>Currency Filter:</h3>
+
         <p>{{3.14159265359 | currency: "€"}}</p>
       <hr>
 
       <h3>Case Filter:</h3>
+
         <input type="text" ng-model="words">
         <p>Caps: {{words | uppercase}}</p>
         <p>Regular: {{words | lowercase}}</p>
@@ -57,7 +63,8 @@
         <ng-pluralize count="pi"
                       when="{'1': 'Here is pi with 1 digit: ',
                             'other': 'Here is pi with {} digits: '}">
-        </ng-pluralize><p>{{3.14159265359 | number: pi}}</p>
+        </ng-pluralize>
+        <p>{{3.14159265359 | number: pi}}</p>
       <hr>
 
       <h3>Tip Calculator:</h3>
@@ -113,6 +120,7 @@
       <hr>
 
       <h3>Show/Hide:</h3>
+
         <div ng-show="3 + 4 == 5">
           3 + 4 isn't 5, don't show
         </div>
@@ -140,7 +148,22 @@
 
         <div ng-class="{highlight: 4 + 4 == 8}"> 4 + 4 = 8</div>
         <div ng-class="{highlight: 4 + 4 == 10}">4 + 4 = 10</div>
+        <hr>
 
+        <h3>Camera Shop:</h3>
+
+        <div ng-controller="mainController">
+          <select ng-model="cameraSelected"
+          <option ng-options="camera.price for camera in cameras | orderBy: '-price'">Price</select>
+          </select>
+          <div ng-model="camera" ng-repeat="camera in cameras | orderBy: cameraSelected">
+            <p><strong>{{camera.title}}</strong></p>
+            <p ng-show="camera.onSale == true" ng-class="{sale: camera.onSale == true}"><em>Price: </em>{{camera.price | currency}} ON SALE!</p>
+            <p ng-show="camera.onSale == false"><em>Price: </em>{{camera.price | currency}}</p>
+            <p><em>Rating: </em>{{camera.rating}}</p>
+            <img ng-src="{{camera.image}}" class="thumbnail">
+          </div>
+        </div>
 
     </div>
     <br><br>

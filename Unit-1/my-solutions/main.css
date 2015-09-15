@@ -9,3 +9,12 @@
 .invalid {
   color: red;
 }
+
+.thumbnail {
+  height: 100px;
+  width: auto;
+}
+
+.sale {
+  color: gold;
+}
