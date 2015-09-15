@@ -31,6 +31,11 @@ var mainControllerFunction = function($scope) {
       onSale: true
     }
   ];
+  $scope.cameraSort = function(item) {
+    if(isNaN(item[$scope.cameraSortExpression]))
+      return item[$scope.cameraSortExpression];
+    return parseInt(item[$scope.cameraSortExpression]);
+  };
 };
 
 

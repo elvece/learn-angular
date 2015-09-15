@@ -153,10 +153,11 @@
         <h3>Camera Shop:</h3>
 
         <div ng-controller="mainController">
-          <select ng-model="cameraSelected"
-          <option ng-options="camera.price for camera in cameras | orderBy: '-price'">Price</select>
-          </select>
-          <div ng-model="camera" ng-repeat="camera in cameras | orderBy: cameraSelected">
+          <select ng-model="cameraSortExpression">
+          <option value="price">Price</option>
+          <option value="rating">Rating</option>
+          </select><br><br>
+          <div ng-repeat="camera in cameras | orderBy: cameraSort">
             <p><strong>{{camera.title}}</strong></p>
             <p ng-show="camera.onSale == true" ng-class="{sale: camera.onSale == true}"><em>Price: </em>{{camera.price | currency}} ON SALE!</p>
             <p ng-show="camera.onSale == false"><em>Price: </em>{{camera.price | currency}}</p>

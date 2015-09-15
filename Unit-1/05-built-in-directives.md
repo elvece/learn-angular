@@ -189,6 +189,7 @@ Use the following data:
 ## Questions
 
 * What is the purpose of `ng-init`?
+  * ***evaluate an expression in curreny scope (use logic), don't overuse, use for special properties with ng-repeat or for injecting data via server side scripting***
 * Why use `ng-src` and `ng-href`?
 * What are directives?
 * Does `ng-class` require an object to be passed in?
