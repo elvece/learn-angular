@@ -51,11 +51,22 @@ var ExercisesController = function($scope){
     return secondsInCentury;
   };
   $scope.rightNow = new Date();
+  $scope.number = 5;
+  $scope.pickRandomNumber = function(){
+    $scope.number = Math.floor(Math.random() * 10) + 1;
+  };
+  $scope.reverseWord = function(){
+    $scope.word = $scope.word.split("").reverse().join("");
+  };
 };
+
+
+
+
+
+
 
 
 app
   .controller('mainController', ['$scope', mainControllerFunction])
   .controller('exerciseController', ['$scope', ExercisesController]);
-
-

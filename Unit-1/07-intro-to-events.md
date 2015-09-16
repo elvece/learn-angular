@@ -37,6 +37,7 @@ And that's it!  Try clicking your button and watch as the number changes automat
 **EXERCISE**
 
 Explain in as much detail as you can what happens when you click the button.  Why does `number` update in the template without us telling it to?
+ * **When the button is clicked, it triggers the `ng-click` directive. The value for this directive is a function, which is defined in the $scope of the controller that this button is encompassed in in the view. This function calculates a random number and modifies the original number property within the controller. The number is then updated on the view by calling the property using angular's bracket evaluation.**
 
 **EXERCISE**
 
@@ -44,7 +45,7 @@ Add a button that will reverse some text when clicked.  Take a look at the examp
 
 ![](http://zippy.gfycat.com/ClosedFreshGar.gif)
 
-**EXERCISE: Create a simple Ping Pong Score Keeper.**  
+**EXERCISE: Create a simple Ping Pong Score Keeper.**
 
 It should display the 2 players' scores, have buttons to increment each player's scores, and highlight the winner (assume games only go to 11).  It should also display the current server (switch serves every 2 points).  Lastly, make sure to include a reset button.  BONUS: Keep track of how many games each player wins.
 
@@ -70,7 +71,7 @@ There are a bunch of other built-in event directives like
 * ng-mouseover
 * ng-mouseup
 
-They all work just like `ng-click`.  When a specific event is triggered, they will run a given method on the current $scope.  
+They all work just like `ng-click`.  When a specific event is triggered, they will run a given method on the current $scope.
 
 **EXERCISE**
 

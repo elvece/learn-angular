@@ -80,6 +80,9 @@
         <h4>Tip: {{cost*tip | currency}}</h4>
       <hr>
 
+      <a href="madLibs/index.html">Link to MadLibs!</a>
+      <hr>
+
       <h3>Repeat:</h3>
 
       <div ng-controller="mainController">
@@ -144,13 +147,13 @@
         <button type="submit" ng-show="password.length >= 6">Sign up!</button>
         <hr>
 
-        <h3>Class:</h3>
+      <h3>Class:</h3>
 
         <div ng-class="{highlight: 4 + 4 == 8}"> 4 + 4 = 8</div>
         <div ng-class="{highlight: 4 + 4 == 10}">4 + 4 = 10</div>
         <hr>
 
-        <h3>Camera Shop:</h3>
+      <h3>Camera Shop:</h3>
 
         <div ng-controller="mainController">
           <select ng-model="cameraSortExpression">
@@ -167,7 +170,7 @@
         </div>
         <hr>
 
-        <h3>Controllers:</h3>
+      <h3>Controllers:</h3>
 
         <div ng-controller="mainController">
           <p>My name is: {{name}}</p>
@@ -176,9 +179,23 @@
 
         <div ng-controller="exerciseController">
           <p>My favorite color is {{FavColor}}.</p>
-          <h3>There are {{secondsInACentury() | number}} seconds in a century!</h3>
-          <h4>Today: {{rightNow | date:'EEEE, MMMM d, y h:mm a'}}</h4>
-        </div>
+          <h4>There are {{secondsInACentury() | number}} seconds in a century!</h4>
+          <p><strong>Today:</strong> {{rightNow | date:'EEEE, MMMM d, y h:mm a'}}</p>
+          <hr>
+
+      <h3>Events:</h3>
+
+          <p>The number is: {{number}}</p>
+          <button class="btn-xs" ng-click="pickRandomNumber()">Pick Random Number</button>
+
+          <h4>Word Reverser:</h4>
+          <input ng-model="word"></input>
+          <p>Your reversed word is: {{word}}</p>
+          <button class="btn-xs" ng-click="reverseWord()">Reverse!</button>
+          <hr>
+      </div>
+
+      <a href="pingPong/index.html">Link to Ping Ping Score Keeper!</a><hr>
 
     </div>
     <br><br>

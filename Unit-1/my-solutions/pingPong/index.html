@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="pingPong">
+  <head>
+    <meta charset="utf-8">
+    <title>Ping Pong Score Keeper</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container" ng-controller="mainController">
+      <h2>Ping Pong Score Keeper</h2>
+
+      <div class="row row-centered">
+        <div class="col-centered box" ng-class="{win: player_one_score == 11">
+          <h2>Player 1</h2>
+          <h1 ng-click="incrementScorePlayerOne()">{{player_one_score}}</h1>
+          <h4>Serving</h4>
+        </div>
+
+        <div class="col-centered box">
+          <h2>Player 2</h2>
+          <h1 ng-click="incrementScorePlayerTwo()">{{player_two_score}}</h1>
+          <h4>Serving</h4>
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn text-center">Play Again?</button>
+
+    </div>
+
+      <!-- scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
