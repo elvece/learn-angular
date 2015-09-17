@@ -27,6 +27,8 @@ var mainController = function($scope){
     if ($scope.game.playerTwo.score < 11){
       $scope.game.playerTwo.score ++;
       $scope.click ++;
+    } else {
+
     }
   };
   $scope.serving = function(){

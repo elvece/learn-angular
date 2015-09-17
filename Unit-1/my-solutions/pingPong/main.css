@@ -6,22 +6,16 @@ h2 {
   height: 400px;
   width: 400px;
   background-color: #4FBAA5;
-  margin: 10px;
-}
-
-.row-centered {
-  text-align: center;
-}
-.col-centered {
-  display: inline-block;
-  float: none;
-  /* inline-block space fix */
-  margin-right: -4px;
+  margin: 60px;
 }
 
 h1 {
   font-size: 10em;
-  padding: 50px;
+  padding: 60px;
+}
+
+h2 {
+  padding: 10px;
 }
 
 .lose {
@@ -32,3 +26,7 @@ h1 {
   background-color: #39AB15;
 }
 
+
+.row {
+  margin: 0 auto;
+}
