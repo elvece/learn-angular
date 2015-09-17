@@ -11,20 +11,20 @@
       <h2>Ping Pong Score Keeper</h2>
 
       <div class="row row-centered">
-        <div class="col-centered box" ng-class="{win: player_one_score == 11">
+        <div class="col-centered box" ng-class="{win: game.playerOne.score == 11, lose: game.playerTwo.score == 11}">
           <h2>Player 1</h2>
-          <h1 ng-click="incrementScorePlayerOne()">{{player_one_score}}</h1>
-          <h4>Serving</h4>
+          <h1 ng-click="incrementScorePlayerOne();  serving()">{{game.playerOne.score}}</h1>
+          <h4><span ng-show="game.playerOne.serving">Serving</span></h4>
         </div>
 
-        <div class="col-centered box">
+        <div class="col-centered box" ng-class="{win: game.playerTwo.score == 11, lose: game.playerOne.score == 11}">
           <h2>Player 2</h2>
-          <h1 ng-click="incrementScorePlayerTwo()">{{player_two_score}}</h1>
-          <h4>Serving</h4>
+          <h1 ng-click="incrementScorePlayerTwo(); serving()">{{game.playerTwo.score}}</h1>
+          <h4><span ng-show="game.playerTwo.serving">Serving</span></h4>
         </div>
       </div>
       <br>
-      <button type="submit" class="btn text-center">Play Again?</button>
+      <button type="submit" class="btn text-center col-md-2 col-md-offset-5 col-xs-2 col-xs-offset-5" ng-click="init()">Play Again?</button>
 
     </div>
 
