@@ -3,5 +3,9 @@
 var app = angular.module('myApp', []);
 
 app.controller('myController', function($scope) {
-  $scope.greeting = "Hello World!";
+  $scope.contact = {
+    name: "",
+    email: "",
+    phone: "",
+  };
 });
