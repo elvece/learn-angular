@@ -3,14 +3,12 @@ var app = angular.module('myApp', []);
 
 app.controller('myController', function($scope) {
   $scope.contacts = [];
-  $scope.contact = {
-    name: "",
-    email: "",
-    phone: "",
-  };
+  $scope.contact = {};
   $scope.addContact = function(){
     $scope.contacts.push($scope.contact);
+
   };
+
 });
 
 //on click of add contact

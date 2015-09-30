@@ -27,7 +27,7 @@
           <input ng-model="contact.phone" type="phone" class="form-control" id="phoneNumber" placeholder="Enter your phone number in the following format: 123-456-7890">
         </div>
         <br>
-        <button type="submit" class="btn btn-success" ng-click="addContact()">Add Contact</button>
+        <button type="submit" class="btn btn-success" ng-click="addContact(); contact = {}">Add Contact</button>
       </form>
       <br>
       <br>
