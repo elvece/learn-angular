@@ -51,6 +51,7 @@ app.controller('mainController', ['$scope', mainController]);
 
 //TO DO:
 //if player1 score is 11, then disable click of player2
+//same with saying who is serving
 
 
 
