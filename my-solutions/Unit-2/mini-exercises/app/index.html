@@ -2,19 +2,23 @@
 <html lang="en" ng-app='myApp'>
 <head>
   <meta charset="UTF-8">
-  <title>Angular Boilerplate</title>
+  <title>Angular Unit 2</title>
   <!-- styles -->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="./css/main.css" rel="stylesheet" media="screen">
 </head>
   <body>
     <div class="container">
-      <div ng-controller="myController" ng-model="initialText">
-        <h1>Say something</h1>
-        <br>
-        <input type="text" ng-model="greeting"></p>
-        <p>{{ greeting }}</p>
-      <!-- add content here -->
+      <div class="collapse navbar-collapse" ng-controller="HeaderController">
+          <ul class="nav nav-pills">
+              <li ng-class="{ active: isActive('/#/')}"><a href="/#/">Home</a></li>
+              <li ng-class="{ active: isActive('/#/bio')}"><a href="/#/bio">Bio</a></li>
+              <li ng-class="{ active: isActive('/#/resume')}"><a href="/#/resume">Resume</a></li>
+              <li ng-class="{ active: isActive('/#/add')}"><a href="/#/add">Add</a></li>
+          </ul>
+      </div>
+      <div ng-view></div>
+
       </div>
     </div>
     <!-- scripts -->
