@@ -121,10 +121,10 @@ Make sure the second route works correctly by visiting `http://localhost:8080/#/
 * Why isn't `ngRoute` part of Angular core?  Name at least 2 other Angular modules we could use
   * ***`ngSanitize`***
 * Compare and contrast client-side routing with server-side routing
-  * ***Answer from Reddit I liked: "If you want to build a SPA (Single Page Application) you need client-side routing to modularize your views/controllers. Certainly you can only do with server-side routing but that would be more like a traditional web application where you are reloading the entire web page whenever user navigates to certain parts of your application. Server/client-side routing need not be mutually exclusive. You can use server-side routing for implementing REST APIs and use client-side routing for SPA needs." ***
+  * ***Answer from Reddit I liked: "If you want to build a SPA (Single Page Application) you need client-side routing to modularize your views/controllers. Certainly you can only do with server-side routing but that would be more like a traditional web application where you are reloading the entire web page whenever user navigates to certain parts of your application. Server/client-side routing need not be mutually exclusive. You can use server-side routing for implementing REST APIs and use client-side routing for SPA needs."***
 * Aside from route definitions, what else can go in a `.config()`?
   * ***only accepts Providers?, every service, factory etc are instances of Provider.***
 * What is `$rootScope`?
   * ***every app has a single root scope and all other scopes are a descendent of this; scopes provide seperation bewtween the model and view by watching the model for changes***
 * What is the `$routeChangeSuccess` event?
-  * ***Broadcasted after a route dependencies are resolved. ngView listens for the directive to instantiate the controller and render the view (from documentation, need further explaination) ***
+  * ***Broadcasted after a route dependencies are resolved. ngView listens for the directive to instantiate the controller and render the view (from documentation, need further explaination)***
