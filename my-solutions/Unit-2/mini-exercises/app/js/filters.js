@@ -5,7 +5,14 @@ app.filter('kebab', function () {
 });
 
 app.filter('redact', function () {
-  return function (input) {
-
+  return function (items, word) {
+    var itemArr = items.split(' ');
+    for (var i = 0; i < itemArr.length; i++) {
+      var item = itemArr[i];
+      if (item === word) {
+        itemArr[i] = 'REDACTED';
+      }
+    }
+    return itemArr.join(' ');
   };
 });
