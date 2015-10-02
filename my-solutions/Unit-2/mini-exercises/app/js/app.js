@@ -1,6 +1,6 @@
 var app = angular.module('myApp', ['ngRoute']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'partials/home.html',
@@ -20,11 +20,13 @@ app.config(function($routeProvider) {
     })
     .when( '/add', {
       templateUrl: 'partials/add.html',
-      controller: 'addThingsController'
+      controller: 'addController'
     })
     .when( '/add/:num1/:num2', {
       templateUrl: 'partials/add.html',
       controller: 'addController'
     })
    .otherwise({ redirectTo: '/'});
+   // use the HTML5 History API
+    $locationProvider.html5Mode(true);
  });

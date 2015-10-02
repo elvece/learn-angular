@@ -22,15 +22,10 @@ app.controller('resumeController', function($scope) {
 
 });
 
-app.controller('addThingsController', function($scope, $routeParams){
-  $scope.greeting = 'Add two numbers to url to add stuff.';
-  $scope.ifParams = false;
-});
-
 app.controller('addController', function($scope, $routeParams){
-  $scope.num1 = parseInt($routeParams.num1);
-  $scope.num2 = parseInt($routeParams.num2);
-  $scope.ifParams = true;
+  $scope.greeting = 'Add two numbers to url to add stuff.';
+  $scope.num1 = parseInt($routeParams.num1 || $routeParams.x);
+  $scope.num2 = parseInt($routeParams.num2 || $routeParams.y);
 });
 
 
